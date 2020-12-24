@@ -9,7 +9,8 @@ const lessLoaderOptions = {
       compact: true
     }),
     'font-size-sm': '16px',
-    'font-size-base': '16px'
+    'font-size-base': '16px',
+    'border-radius-base': '10px'
   },
   javascriptEnabled: true,
   paths: [path.resolve(__dirname, 'src')]

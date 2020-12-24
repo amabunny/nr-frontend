@@ -46,7 +46,7 @@ export const DpsCard = ({ text, replies, author, time }: IDpsCardProps) => {
         <div className={classes.replies}>
           {replies.map((reply, index) => (
             <div key={`${author}-${reply.author}-${reply.time}-${index}`}>
-              - {text}
+              - {reply.text}
             </div>
           ))}
         </div>
