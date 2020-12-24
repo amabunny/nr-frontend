@@ -35,6 +35,7 @@
     "react-intl": "^5.10.9",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "serve": "^11.3.2",
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4"
   },
@@ -42,7 +43,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "serve -p 3000 build"
   },
   "browserslist": {
     "production": [
