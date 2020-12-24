@@ -1,5 +1,4 @@
 const CracoLessPlugin = require('craco-less')
-const cloneDeep = require('lodash/cloneDeep')
 const { getThemeVariables } = require('antd/dist/theme')
 const path = require('path')
 

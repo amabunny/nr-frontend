@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d8608cc-12bf-4fc4-87ae-d63820c2c3f7" name="Default Changelist" comment="Add env">
-      <change beforePath="$PROJECT_DIR$/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/.env.production" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1d8608cc-12bf-4fc4-87ae-d63820c2c3f7" name="Default Changelist" comment="correct env">
       <change beforePath="$PROJECT_DIR$/craco.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/craco.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +62,7 @@
       <workItem from="1608821021146" duration="1181000" />
       <workItem from="1608822206945" duration="300000" />
       <workItem from="1608822509851" duration="199000" />
-      <workItem from="1608822710804" duration="18183000" />
+      <workItem from="1608822710804" duration="18207000" />
     </task>
     <task id="LOCAL-00001" summary="Add env">
       <created>1608842308960</created>
@@ -73,7 +71,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608842308960</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="correct env">
+      <created>1608842677504</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608842677504</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +98,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add env" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add env" />
+    <MESSAGE value="correct env" />
+    <option name="LAST_COMMIT_MESSAGE" value="correct env" />
   </component>
 </project>
