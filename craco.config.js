@@ -51,7 +51,7 @@ module.exports = {
           {
             loader: 'less-loader',
             options: {
-              lessOptions: cloneDeep(lessLoaderOptions)
+              lessOptions: lessLoaderOptions
             }
           }
         ]
@@ -69,7 +69,7 @@ module.exports = {
           {
             loader: 'less-loader',
             options: {
-              lessOptions: cloneDeep(lessLoaderOptions)
+              lessOptions: lessLoaderOptions
             }
           }
         ]
