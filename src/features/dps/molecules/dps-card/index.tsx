@@ -25,7 +25,10 @@ export const DpsCard = ({ text, replies, author, time }: IDpsCardProps) => {
             size={15}
           />
 
-          <FormattedTime value={time} />
+          {isNaN(new Date(time || NaN).getTime())
+            ? time
+            : <FormattedTime value={time} />
+          }
         </Grid>
       )}
     >
@@ -41,8 +44,8 @@ export const DpsCard = ({ text, replies, author, time }: IDpsCardProps) => {
 
       {replies && (
         <div className={classes.replies}>
-          {replies.map(({ text, time, author }) => (
-            <div key={`${author}-${time}`}>
+          {replies.map((reply, index) => (
+            <div key={`${author}-${reply.author}-${reply.time}-${index}`}>
               - {text}
             </div>
           ))}

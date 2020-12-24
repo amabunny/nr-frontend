@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d8608cc-12bf-4fc4-87ae-d63820c2c3f7" name="Default Changelist" comment="correct env">
-      <change beforePath="$PROJECT_DIR$/craco.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/craco.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/dps/molecules/dps-card/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/dps/molecules/dps-card/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/dps/store/dps-posts.events.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/dps/store/dps-posts.events.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/dps/store/dps-posts.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/dps/store/dps-posts.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/dps/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dps/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +27,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nr-backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -30,6 +36,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\iamgr\WebstormProjects\nr-frontend\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\iamgr\WebstormProjects\nr-frontend\src\components\app" />
     </key>
@@ -62,7 +71,7 @@
       <workItem from="1608821021146" duration="1181000" />
       <workItem from="1608822206945" duration="300000" />
       <workItem from="1608822509851" duration="199000" />
-      <workItem from="1608822710804" duration="18207000" />
+      <workItem from="1608822710804" duration="20692000" />
     </task>
     <task id="LOCAL-00001" summary="Add env">
       <created>1608842308960</created>
@@ -78,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608842677504</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="correct env">
+      <created>1608842697834</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608842697834</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

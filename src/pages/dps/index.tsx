@@ -6,7 +6,7 @@ import { EmptyLayerTemplate } from 'ui'
 
 export const DpsPage = () => {
   React.useEffect(() => {
-    DpsPostsModel.loadPosts()
+    DpsPostsModel.init()
   }, [])
 
   return (
