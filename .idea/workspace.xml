@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1d8608cc-12bf-4fc4-87ae-d63820c2c3f7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/craco.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nr-frontend.babel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/hostApi.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/app/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/router/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/dps/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/dps/molecules/dps-card/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/dps/molecules/dps-card/style.module.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/dps/organisms/dps-posts/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/dps/organisms/dps-posts/style.module.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/dps/organisms/filters/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/dps/store/dps-posts.events.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/dps/store/dps-posts.store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/dps/store/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/intl/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/intl/ru-RU.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/dps/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/env.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/models/dps.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/models/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/router.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/__variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/common.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/extends.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/models/dps.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/templates/empty-layer/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/templates/empty-layer/style.module.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reportWebVitals.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1m6jcoAW0zB6DWfJZq6lZJuBwnn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nr-backend" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="C:\Users\iamgr\WebstormProjects\nr-frontend\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\iamgr\WebstormProjects\nr-frontend\src\components\app" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1d8608cc-12bf-4fc4-87ae-d63820c2c3f7" name="Default Changelist" comment="" />
+      <created>1608821016391</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608821016391</updated>
+      <workItem from="1608821021146" duration="1181000" />
+      <workItem from="1608822206945" duration="300000" />
+      <workItem from="1608822509851" duration="199000" />
+      <workItem from="1608822710804" duration="16849000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
