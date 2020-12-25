@@ -1,18 +1,17 @@
-import { createStore, attach, forward, guard, combine } from 'effector'
+import { createStore, attach, forward, guard, combine, Store } from 'effector'
 import { IPost } from '@dps-models'
 import { IGetCityDpsPosts } from 'services/models'
 import { debounce } from 'patronum'
 import {
-  loadPosts, changeFilters, init, writeFiltersToLocalStorage,
-  readLocalStorageFilters, guardedLoadPosts, refreshPosts, runSearch
+  loadPosts, changeFilters, init, writeFiltersToLocalStorage, toggleTag,
+  readLocalStorageFilters, guardedLoadPosts, refreshPosts, runSearch, IRunSearch
 } from './dps-posts.events'
-import { ISearchFilters } from './dps-posts.types'
+import { ISearchFilters, DEFAULT_TAGS } from './dps-posts.types'
 
 const $posts = createStore<IPost[]>([])
 const $showingPosts = createStore<IPost[]>([])
-const $postsFilters = createStore<ISearchFilters>({ offset: 1, search: '' })
+const $postsFilters = createStore<ISearchFilters>({ offset: 1, search: '', tags: [] })
 const $lastLoadedTime = createStore<Date | null>(null)
-const $tags = createStore<string[]>([])
 
 $posts
   .on(loadPosts, () => [])
@@ -25,6 +24,16 @@ $showingPosts
 $postsFilters
   .on(readLocalStorageFilters.doneData, (state, payload) => ({ ...state, ...payload }))
   .on(changeFilters, (state, payload) => ({ ...state, ...payload }))
+  .on(toggleTag, ({ tags, ...eachFilters }, togglingTag) => tags.includes(togglingTag)
+    ? ({
+      ...eachFilters,
+      tags: tags.filter(filteringTag => filteringTag !== togglingTag)
+    })
+    : ({
+      ...eachFilters,
+      tags: [...tags, togglingTag]
+    })
+  )
 
 $lastLoadedTime
   .on(loadPosts.done, () => new Date())
@@ -41,12 +50,15 @@ const loadPostsWithFilters = attach({
   source: $mappedEndpointParams
 })
 
+const $searchParams: Store<IRunSearch> = combine(
+  $postsFilters,
+  $posts,
+  ({ search, tags }, posts): IRunSearch => ({ posts, searchString: search, tags })
+)
+
 const runSearchWithParams = attach({
   effect: runSearch,
-  source: combine({
-    searchString: $postsFilters.map(({ search }) => search),
-    posts: $posts
-  })
+  source: $searchParams
 })
 
 forward({
@@ -70,7 +82,7 @@ const debouncedSearch = debounce({
 })
 
 forward({
-  from: [debouncedSearch, loadPosts.done],
+  from: [debouncedSearch, loadPosts.done, $postsFilters.map(({ tags }) => tags).updates],
   to: runSearchWithParams
 })
 
@@ -85,9 +97,10 @@ export {
   $postsLoading,
   $lastLoadedTime,
   $postsFilters,
-  $tags,
   guardedLoadPosts as loadPosts,
   refreshPosts,
   changeFilters,
-  init
+  toggleTag,
+  init,
+  DEFAULT_TAGS
 }

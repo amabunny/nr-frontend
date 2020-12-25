@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { App } from './components/app'
 import reportWebVitals from './reportWebVitals'
+import 'styles/overrides.less'
 
 ReactDOM.render(
   <App />,

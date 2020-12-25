@@ -15,8 +15,17 @@ export const readLocalStorageFilters = createEffect((): ISearchFilters => (
 export const writeFiltersToLocalStorage = createEffect((params: ISearchFilters) => (
   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(params))
 ))
-export const runSearch = createEffect(({ posts, searchString }: IRunSearch): Promise<IPost[]> => new Promise((resolve) =>
-  resolve(posts.filter(({ text }) => text?.toLowerCase().includes(searchString.toLowerCase())))
+export const runSearch = createEffect(({ posts, searchString, tags }: IRunSearch): Promise<IPost[]> => new Promise((resolve) =>
+  resolve(posts.filter(({ text }) =>
+    tags?.length
+      ? (
+        tags?.some(tag => text?.toLowerCase().includes(tag.toLowerCase())) ||
+        (searchString && text?.toLowerCase().includes(searchString))
+      )
+      : (
+        text?.toLowerCase().includes(searchString.toLowerCase())
+      )
+  ))
 ))
 
 export const init = createEvent()
@@ -24,7 +33,10 @@ export const guardedLoadPosts = createEvent()
 export const refreshPosts = createEvent()
 export const changeFilters = createEvent<Partial<ISearchFilters>>()
 
-interface IRunSearch {
+export const toggleTag = createEvent<string>()
+
+export interface IRunSearch {
   posts: IPost[]
   searchString: string
+  tags?: string[]
 }
