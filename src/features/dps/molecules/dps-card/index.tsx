@@ -1,8 +1,8 @@
 import React from 'react'
 import { Card } from 'antd'
+import { FieldTimeOutlined } from '@ant-design/icons'
 import cn from 'classnames'
 import { Grid } from '@react-css/grid'
-import { Emoji } from 'emoji-mart'
 import { FormattedTime } from 'react-intl'
 import { IPost } from '@dps-models'
 import classes from './style.module.less'
@@ -17,13 +17,11 @@ export const DpsCard = ({ text, replies, author, time }: IDpsCardProps) => {
       size={'small'}
       title={(
         <Grid
+          alignItems={'center'}
           columns={'auto 1fr'}
           gridGap={'10px'}
         >
-          <Emoji
-            emoji={':clock130:'}
-            size={15}
-          />
+          <FieldTimeOutlined />
 
           {isNaN(new Date(time || NaN).getTime())
             ? time

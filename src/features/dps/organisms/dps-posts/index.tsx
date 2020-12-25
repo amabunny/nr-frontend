@@ -5,6 +5,7 @@ import { ReloadOutlined } from '@ant-design/icons'
 import { FormattedTime } from 'react-intl'
 import { Grid } from '@react-css/grid'
 import { Filters } from '../filters'
+import { Tags } from '../tags'
 import { DpsCard } from '../../molecules/dps-card'
 import { DpsPostsModel } from '../../store'
 import classes from './style.module.less'
@@ -36,9 +37,13 @@ export const DpsPosts = () => {
               shape={'circle'}
               size={'large'}
               type={'primary'}
-              onClick={() => DpsPostsModel.loadPosts()}
+              onClick={() => DpsPostsModel.refreshPosts()}
             />
           </Grid>
+        </Col>
+
+        <Col span={24}>
+          <Tags />
         </Col>
 
         {loading && (

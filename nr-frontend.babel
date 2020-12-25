@@ -35,6 +35,19 @@
                                 </translations>
                             </concept_node>
                             <concept_node>
+                                <name>search</name>
+                                <definition_loaded>false</definition_loaded>
+                                <description></description>
+                                <comment></comment>
+                                <default_text></default_text>
+                                <translations>
+                                    <translation>
+                                        <language>ru-RU</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                </translations>
+                            </concept_node>
+                            <concept_node>
                                 <name>title</name>
                                 <definition_loaded>false</definition_loaded>
                                 <description></description>

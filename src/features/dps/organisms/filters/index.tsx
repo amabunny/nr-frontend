@@ -1,14 +1,12 @@
 import React from 'react'
-import { Row, Col, Collapse, Form, InputNumber } from 'antd'
+import { Row, Col, Collapse, Form, InputNumber, Input } from 'antd'
 import { useStore } from 'effector-react'
 import { FilterOutlined } from '@ant-design/icons'
 import { FormattedMessage } from 'react-intl'
 import { DpsPostsModel } from '../../store'
 
-const $offsetInput = DpsPostsModel.$postsFilters.map(({ offset }) => offset)
-
 export const Filters = () => {
-  const offsetInput = useStore($offsetInput)
+  const { offset, search } = useStore(DpsPostsModel.$postsFilters)
 
   return (
     <Collapse>
@@ -26,7 +24,12 @@ export const Filters = () => {
         )}
         key={'1'}
       >
-        <Form onBlur={() => DpsPostsModel.loadPosts()}>
+        <Form
+          labelCol={{ span: 12 }}
+          layout={'horizontal'}
+          wrapperCol={{ span: 12 }}
+          onBlur={() => DpsPostsModel.loadPosts()}
+        >
           <Form.Item
             label={<FormattedMessage id={'dps.filters.scrollCount'} />}
             style={{ marginBottom: 0 }}
@@ -34,13 +37,21 @@ export const Filters = () => {
             <InputNumber
               max={10}
               size={'large'}
-              value={offsetInput}
+              type={'number'}
+              value={offset}
               width={'100%'}
               onChange={e => DpsPostsModel.changeFilters({
                 offset: e && e > 10
-                  ? offsetInput
+                  ? offset
                   : Number(e)
               })}
+            />
+          </Form.Item>
+
+          <Form.Item label={<FormattedMessage id={'dps.filters.search'} />}>
+            <Input
+              value={search}
+              onChange={e => DpsPostsModel.changeFilters({ search: e.target.value })}
             />
           </Form.Item>
         </Form>
