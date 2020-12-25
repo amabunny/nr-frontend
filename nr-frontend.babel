@@ -61,6 +61,19 @@
                                 </translations>
                             </concept_node>
                             <concept_node>
+                                <name>tags</name>
+                                <definition_loaded>false</definition_loaded>
+                                <description></description>
+                                <comment></comment>
+                                <default_text></default_text>
+                                <translations>
+                                    <translation>
+                                        <language>ru-RU</language>
+                                        <approved>false</approved>
+                                    </translation>
+                                </translations>
+                            </concept_node>
+                            <concept_node>
                                 <name>title</name>
                                 <definition_loaded>false</definition_loaded>
                                 <description></description>
@@ -75,6 +88,19 @@
                             </concept_node>
                         </children>
                     </folder_node>
+                    <concept_node>
+                        <name>notFoundAnything</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description></description>
+                        <comment></comment>
+                        <default_text></default_text>
+                        <translations>
+                            <translation>
+                                <language>ru-RU</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
                     <concept_node>
                         <name>title</name>
                         <definition_loaded>false</definition_loaded>

@@ -8,5 +8,11 @@ export interface ISearchFilters extends IGetCityDpsPosts {
 export const DEFAULT_TAGS = [
   'миха',
   'бельский',
-  'рощ'
+  'рощ',
+  'элеватор',
+  'запад',
+  'худ',
+  'дружб',
+  'фабри',
+  'арбат'
 ]

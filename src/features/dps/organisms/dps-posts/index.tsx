@@ -2,7 +2,7 @@ import React from 'react'
 import { useList, useStore } from 'effector-react'
 import { Row, Col, Typography, Button, Spin } from 'antd'
 import { ReloadOutlined } from '@ant-design/icons'
-import { FormattedTime } from 'react-intl'
+import { FormattedMessage, FormattedTime } from 'react-intl'
 import { Grid } from '@react-css/grid'
 import { Filters } from '../filters'
 import { Tags } from '../tags'
@@ -10,9 +10,12 @@ import { DpsCard } from '../../molecules/dps-card'
 import { DpsPostsModel } from '../../store'
 import classes from './style.module.less'
 
+const $postsCount = DpsPostsModel.$posts.map(posts => posts.length)
+
 export const DpsPosts = () => {
   const lastLoadedTime = useStore(DpsPostsModel.$lastLoadedTime)
   const loading = useStore(DpsPostsModel.$postsLoading)
+  const postsCount = useStore($postsCount)
 
   return (
     <div className={classes.dpsPosts}>
@@ -59,6 +62,21 @@ export const DpsPosts = () => {
               <Spin size={'large'} />
             </Grid>
           </Col>
+        )}
+
+        {!loading && postsCount === 0 && (
+          <Grid
+            alignItems={'center'}
+            gridGap={'16px'}
+            justifyContent={'center'}
+            style={{ height: 400, textAlign: 'center', whiteSpace: 'pre-wrap' }}
+          >
+            <div>
+              <Typography.Title level={3}>
+                <FormattedMessage id={'dps.notFoundAnything'} />
+              </Typography.Title>
+            </div>
+          </Grid>
         )}
 
         {useList(DpsPostsModel.$posts, post => (

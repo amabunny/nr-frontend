@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStore } from 'effector-react'
-import { Tag } from 'antd'
+import { Tag, Collapse, Row, Col } from 'antd'
 import { DpsPostsModel } from '../../store'
 import { FormattedMessage } from 'react-intl'
 
@@ -14,23 +14,36 @@ export const Tags = () => {
   return (
     <>
       {search && (
-        <Tag.CheckableTag
-          checked
-          onClick={onSearchTagClick}
-        >
-          <FormattedMessage id={'dps.filters.searchTag'} /> {search}
-        </Tag.CheckableTag>
+        <div style={{ marginBottom: 10 }}>
+          <Tag.CheckableTag
+            checked
+            onClick={onSearchTagClick}
+          >
+            <FormattedMessage id={'dps.filters.searchTag'} /> {search}
+          </Tag.CheckableTag>
+        </div>
       )}
 
-      {DpsPostsModel.DEFAULT_TAGS.map(tag =>
-        <Tag.CheckableTag
-          checked={tags.includes(tag)}
-          key={tag}
-          onChange={() => DpsPostsModel.toggleTag(tag)}
+      <Collapse>
+        <Collapse.Panel
+          header={<FormattedMessage id={'dps.filters.tags'} />}
+          key={'1'}
         >
-          {tag}
-        </Tag.CheckableTag>
-      )}
+          <Row gutter={[8, 8]}>
+            {DpsPostsModel.DEFAULT_TAGS.map(tag =>
+              <Col>
+                <Tag.CheckableTag
+                  checked={tags.includes(tag)}
+                  key={tag}
+                  onChange={() => DpsPostsModel.toggleTag(tag)}
+                >
+                  {tag}
+                </Tag.CheckableTag>
+              </Col>
+            )}
+          </Row>
+        </Collapse.Panel>
+      </Collapse>
     </>
   )
 }

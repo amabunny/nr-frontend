@@ -2,6 +2,8 @@
 	"dps.filters.scrollCount": "Кол-во скроллов",
 	"dps.filters.search": "Поиск",
 	"dps.filters.searchTag": "Поиск:",
+	"dps.filters.tags": "Тэги",
 	"dps.filters.title": "Фильтр",
+	"dps.notFoundAnything": "Ничего не найдено. Проверьте фильтры \nи (или) тэги.",
 	"dps.title": "{icon} Стерлитамак ДПС"
 }
