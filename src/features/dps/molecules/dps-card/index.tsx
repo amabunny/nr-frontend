@@ -14,6 +14,7 @@ interface IDpsCardProps extends IPost {
 export const DpsCard = ({ text, replies, author, time }: IDpsCardProps) => {
   return (
     <Card
+      className={classes.card}
       size={'small'}
       title={(
         <Grid
