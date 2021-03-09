@@ -3,11 +3,10 @@ import { Card } from 'antd'
 import { FieldTimeOutlined } from '@ant-design/icons'
 import cn from 'classnames'
 import { Grid } from '@react-css/grid'
-import { FormattedTime } from 'react-intl'
-import { IPost } from '@dps-models'
+import { INormalizedPost } from '../../store'
 import classes from './style.module.less'
 
-interface IDpsCardProps extends IPost {
+interface IDpsCardProps extends INormalizedPost {
 
 }
 
@@ -24,10 +23,13 @@ export const DpsCard = ({ text, replies, author, time }: IDpsCardProps) => {
         >
           <FieldTimeOutlined />
 
-          {isNaN(new Date(time || NaN).getTime())
-            ? time
-            : <FormattedTime value={time} />
-          }
+          {time.type === 'minutes_ago' && (
+            `${time.count} ${time.word} назад`
+          )}
+
+          {time.type === 'hours_ago' && (
+            `${time.count} ${time.word} назад`
+          )}
         </Grid>
       )}
     >

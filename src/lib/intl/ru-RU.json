@@ -5,5 +5,7 @@
 	"dps.filters.tags": "Тэги",
 	"dps.filters.title": "Фильтр",
 	"dps.notFoundAnything": "Ничего не найдено. Проверьте фильтры \nи (или) тэги.",
+	"dps.time.hoursAgo": "",
+	"dps.time.minutesAgo": "{count, plural, =0 {минут} one {# минута} two {# минуты} three {# минуты} four {# минуты} other {# минут}} назад",
 	"dps.title": "{icon} Стерлитамак ДПС"
 }

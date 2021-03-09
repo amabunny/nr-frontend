@@ -8,6 +8,22 @@ import { DpsPostsModel } from '../../store'
 export const Filters = () => {
   const { offset, search } = useStore(DpsPostsModel.$postsFilters)
 
+  const onFormBlur = () => {
+    DpsPostsModel.loadPosts()
+  }
+
+  const onScrollCountChange = (e?: string | number) => {
+    const newOffset = e && e > 10
+      ? offset
+      : Number(e)
+
+    DpsPostsModel.changeFilters({ offset: newOffset })
+  }
+
+  const onSearchStringChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    DpsPostsModel.changeFilters({ search: e.target.value })
+  }
+
   return (
     <Collapse>
       <Collapse.Panel
@@ -28,30 +44,23 @@ export const Filters = () => {
           labelCol={{ span: 12 }}
           layout={'horizontal'}
           wrapperCol={{ span: 12 }}
-          onBlur={() => DpsPostsModel.loadPosts()}
+          onBlur={onFormBlur}
         >
-          <Form.Item
-            label={<FormattedMessage id={'dps.filters.scrollCount'} />}
-            style={{ marginBottom: 0 }}
-          >
+          <Form.Item label={<FormattedMessage id={'dps.filters.scrollCount'} />}>
             <InputNumber
               max={10}
               size={'large'}
               type={'number'}
               value={offset}
               width={'100%'}
-              onChange={e => DpsPostsModel.changeFilters({
-                offset: e && e > 10
-                  ? offset
-                  : Number(e)
-              })}
+              onChange={onScrollCountChange}
             />
           </Form.Item>
 
           <Form.Item label={<FormattedMessage id={'dps.filters.search'} />}>
             <Input
               value={search}
-              onChange={e => DpsPostsModel.changeFilters({ search: e.target.value })}
+              onChange={onSearchStringChange}
             />
           </Form.Item>
         </Form>
