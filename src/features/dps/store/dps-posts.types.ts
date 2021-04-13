@@ -15,7 +15,10 @@ export const DEFAULT_TAGS = [
   'поворот',
   'черномор',
   'дтп',
-  'авария'
+  'авария',
+  'сода',
+  'менд',
+  'арена'
 ]
 
 export interface ISearchFilters extends IGetCityDpsPosts {
