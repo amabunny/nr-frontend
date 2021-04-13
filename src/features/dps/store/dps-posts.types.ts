@@ -42,6 +42,6 @@ export type ExtractedTimeTypes =
     type: 'empty'
   }
 
-export interface INormalizedPost extends Omit<IPost, 'time'> {
-  time: ExtractedTimeTypes
+export interface INormalizedPost extends IPost {
+
 }

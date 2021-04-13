@@ -47,7 +47,7 @@ const $mappedEndpointParams = $postsFilters.map(({ offset }): IGetCityDpsPosts =
 
 const $timeExtractedPosts = $showingPosts.map(showingPosts => showingPosts.map(post => ({
   ...post,
-  time: post.time
+  time: post.time || ''
 })))
 
 $timeExtractedPosts.watch(console.log)

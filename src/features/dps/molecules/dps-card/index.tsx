@@ -23,13 +23,7 @@ export const DpsCard = ({ text, replies, author, time }: IDpsCardProps) => {
         >
           <FieldTimeOutlined />
 
-          {time.type === 'minutes_ago' && (
-            `${time.count} ${time.word} назад`
-          )}
-
-          {time.type === 'hours_ago' && (
-            `${time.count} ${time.word} назад`
-          )}
+          {time}
         </Grid>
       )}
     >
