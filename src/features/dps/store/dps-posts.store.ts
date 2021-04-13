@@ -7,7 +7,6 @@ import {
   readLocalStorageFilters, guardedLoadPosts, refreshPosts, runSearch, IRunSearch
 } from './dps-posts.events'
 import { ISearchFilters, DEFAULT_TAGS } from './dps-posts.types'
-import { extractTimeFromString } from './dps-posts.utils'
 
 const $posts = createStore<IPost[]>([])
 const $showingPosts = createStore<IPost[]>([])
@@ -48,7 +47,7 @@ const $mappedEndpointParams = $postsFilters.map(({ offset }): IGetCityDpsPosts =
 
 const $timeExtractedPosts = $showingPosts.map(showingPosts => showingPosts.map(post => ({
   ...post,
-  time: extractTimeFromString(post.time)
+  time: post.time
 })))
 
 $timeExtractedPosts.watch(console.log)
